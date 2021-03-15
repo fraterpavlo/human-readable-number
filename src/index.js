@@ -39,11 +39,7 @@ module.exports = function toReadable (number) {
              return  teens[(number % 10)];
           }
           else {
-              return tens[Math.floor(number / 10)] + ' ' + ones[(number % 10)];
+              return (tens[Math.floor(number / 10)] + ' ' + ones[(number % 10)]).trim();
           }
       };
-      String = String.trim();
-      return String;
     };
-    
-    console.log(toReadable(880));
